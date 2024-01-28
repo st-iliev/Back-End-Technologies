@@ -1,0 +1,9 @@
+function solve(number,array){
+    let arr = [];
+    for( let i = 0; number > 0;i++){
+        arr[i] = array[--number];
+    }
+    console.log(arr.join(' '));
+}
+
+solve(3, [10, 20, 30, 40, 50])

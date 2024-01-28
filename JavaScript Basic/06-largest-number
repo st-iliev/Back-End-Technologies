@@ -1,0 +1,18 @@
+function largestNumber(firstNumber,secondNumber,thirdNumber){
+    let result;
+    if(firstNumber > secondNumber){
+        if(firstNumber > thirdNumber){
+            result = firstNumber;
+        }else{
+            result = thirdNumber;
+        }
+    }else{
+        if(secondNumber > thirdNumber){
+            result = secondNumber;
+        } else{
+            result = thirdNumber;
+        }
+    }
+    console.log(`The largest number is ${result}.`);
+}
+largestNumber(3,-5,13)

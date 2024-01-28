@@ -1,0 +1,6 @@
+function solve(text,index,count){
+    let result =  text.slice(index,index+count);
+    console.log(result);
+}
+
+solve('SkipWord', 4, 7)

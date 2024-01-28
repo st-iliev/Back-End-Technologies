@@ -1,0 +1,16 @@
+function solve(text,word){
+    function repeat(word){
+        let censored = ``;
+        for (let index = 0; index < word.length; index++) {
+            censored += `*`;         
+        }
+         return censored;
+    }
+   let modifiedText = text.replace(word, repeat(word));
+   while(modifiedText.includes(word)){
+    modifiedText = modifiedText.replace(word, repeat(word));
+   }
+    console.log(modifiedText);
+}
+
+solve('A small sentence with small some words','small')

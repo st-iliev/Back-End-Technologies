@@ -1,0 +1,21 @@
+function solve(rawNumber,firstOperation,secondOperation,thirdOperation,forthOperation,fifthOperation){
+    let number = parseInt(rawNumber);
+    const operations = [firstOperation,secondOperation,thirdOperation,forthOperation,fifthOperation];
+
+    for(const operation of operations){
+        if(operation == `chop`){
+            console.log(number /=2);
+        }else if (operation == `dice`){
+            number = Math.sqrt(number);
+            console.log(number)
+        }else if(operation == `spice`){
+            console.log(++number);
+        }else if(operation == `bake`){
+            console.log(number*=3);
+        }else if(operation == `fillet`){
+            console.log(number*=0.8);
+        }
+    }
+}
+
+solve('9', 'dice', 'spice', 'chop', 'bake','fillet')

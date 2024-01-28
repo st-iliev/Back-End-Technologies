@@ -1,0 +1,9 @@
+function personInfo(firstName,lastName,studentAge){
+    let person = {
+        firstName: firstName,
+        lastName: lastName,
+        age: studentAge
+    };
+    return person;
+}
+personInfo("George","Smith","18")

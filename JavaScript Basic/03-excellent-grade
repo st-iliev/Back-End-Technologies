@@ -1,0 +1,10 @@
+function compare(grade){
+    if(grade >= 5.50){
+    console.log("Excellent");
+    }
+    else{
+    console.log("Not excellent");
+    }  
+}
+
+compare(6.65)

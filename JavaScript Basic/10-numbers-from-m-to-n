@@ -1,0 +1,7 @@
+function result(firstNumber,secondNumber){
+    for( let i = firstNumber; secondNumber <= i; i-- ){
+        console.log(i);
+    }
+}
+
+result(6,2);

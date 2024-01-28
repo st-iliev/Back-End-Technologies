@@ -1,0 +1,9 @@
+function solve(text,count){
+    let newText = ``;
+    for (let i = 0; i < count; i++) {
+        newText += text;   
+    }
+    console.log(newText);
+}
+
+solve("abc", 3 )

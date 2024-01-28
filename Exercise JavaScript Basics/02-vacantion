@@ -1,0 +1,43 @@
+function solve(numberOfPeople,typeOfPeople,dayOfWeek){
+    let totalPrice;
+    switch(typeOfPeople){
+        case "Students":
+            if(dayOfWeek == "Friday"){
+                totalPrice = numberOfPeople * 8.45;
+            }else if (dayOfWeek == "Saturday"){
+                totalPrice = numberOfPeople * 9.8;
+            }else if (dayOfWeek == "Sunday"){
+                totalPrice = numberOfPeople * 10.46;
+            }
+            if(numberOfPeople >= 30){
+                totalPrice -= totalPrice*0.15;
+            } break;
+            break;
+        case "Business":
+            if(numberOfPeople >= 100){
+               numberOfPeople-= 10;
+            }
+            if(dayOfWeek == "Friday"){
+                totalPrice = numberOfPeople * 10.9;
+            }else if (dayOfWeek == "Saturday"){
+                totalPrice = numberOfPeople * 15.6;
+            }else if (dayOfWeek == "Sunday"){
+                totalPrice = numberOfPeople * 16;
+            } break;
+        case "Regular":
+            if(dayOfWeek == "Friday"){
+                totalPrice = numberOfPeople * 15;
+            }else if (dayOfWeek == "Saturday"){
+                totalPrice = numberOfPeople * 20;
+            }else if (dayOfWeek == "Sunday"){
+                totalPrice = numberOfPeople * 22.5;
+            } 
+            if(10 <= numberOfPeople && numberOfPeople <= 20){
+                totalPrice -= totalPrice*0.05;
+            } break;
+    }
+    console.log(`Total price: ${totalPrice.toFixed(2)}`)
+    
+}
+
+solve(30,"Students","Sunday")

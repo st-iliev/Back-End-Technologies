@@ -1,0 +1,21 @@
+function solve(digits){
+    let totalSum = 0;
+    let areSame = true;
+    let digit = digits%10;
+    while(digits>0){
+        let number = digits%10;
+        if(digit !=number){
+            areSame = false;
+        }
+        totalSum += number;
+        digits= Math.floor(digits / 10);  
+    }
+    if(areSame){
+        console.log(areSame);
+    }else{
+        console.log(areSame);
+    }
+    console.log(totalSum);
+}
+
+solve(1234)
