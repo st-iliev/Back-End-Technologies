@@ -1,0 +1,14 @@
+function solve (names){
+    names.sort((a,b) => a.localeCompare(b));
+    for (let index = 1; index <= names.length; index++) {
+    console.log(`${index}.${names[index-1]}`);
+    }
+ }
+
+solve (["John",
+
+"Bob",
+  
+"Christina",
+
+"Ema"])

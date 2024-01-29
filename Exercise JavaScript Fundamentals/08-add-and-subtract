@@ -1,0 +1,10 @@
+function sumAndSubstract(firstNumber,secondNumber,thirdNumber){
+    let sum = (firstNumber,secondNumber) => firstNumber+ secondNumber;
+    let substract = (firstNumber,thirdNumber) => firstNumber - thirdNumber;
+
+    let result = substract(sum(firstNumber,secondNumber),thirdNumber);
+
+    console.log(result);
+}
+
+sumAndSubstract(23,6,10)

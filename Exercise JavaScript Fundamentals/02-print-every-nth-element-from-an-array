@@ -1,0 +1,19 @@
+function solve(input,step){
+    let arr = [];
+    for (let index = 0; index < input.length; index+=step) {
+         arr.push(input[index]);       
+    }
+    return arr;
+}
+
+solve(['5',
+
+'20',
+
+'31',
+
+'4',
+
+'20'],
+
+2 )

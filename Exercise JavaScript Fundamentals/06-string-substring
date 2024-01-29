@@ -1,0 +1,10 @@
+function solve (word,text){
+    let isFound = text.toLowerCase().split(' ').includes(word.toLowerCase());
+    if(isFound){
+        console.log(word);
+    }else{
+        console.log(`${word} not found!`)
+    }
+}
+
+solve('javascript','JavaScript is the best programming language' )

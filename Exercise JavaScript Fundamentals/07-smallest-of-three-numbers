@@ -1,0 +1,6 @@
+function findLowerNumber(firstNumber,secondNumber,thirdNumber){
+ let lowerNumber = Math.min(firstNumber,secondNumber,thirdNumber);
+ console.log(lowerNumber);
+}
+
+findLowerNumber(2,5,3)

@@ -1,0 +1,17 @@
+function solve(word,text){
+    const words = word.split(",").map(word => word.trim());
+    let censoredText = text.split(" ");
+    for (let index = 0; index < censoredText.length; index++) {
+        if(censoredText[index].includes("*")){
+            for (let i = 0; i < words.length; i++) {
+                if(censoredText[index].length === words[i].length){
+                    censoredText[index] = words[i];
+                    break;
+                }
+            }
+        }  
+    }
+    console.log(censoredText.join(" "));
+}
+
+solve('great, learning','softuni is ***** place for ******** new programming languages')

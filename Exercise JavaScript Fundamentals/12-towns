@@ -1,0 +1,16 @@
+function town(input){
+    let townList = [];
+   for (const iterator of input) {
+    let townArray =iterator.split('|');
+    let townInfo = {
+    town : townArray[0].trim(),
+    latitude: parseFloat(townArray[1].trim()).toFixed(2),
+     longitude: parseFloat(townArray[2].trim()).toFixed(2)
+    };
+    townList.push(townInfo);
+   }
+   for (const key of townList) {
+    console.log(`{ town: '${key.town}', latitude: '${key.latitude}', longitude: '${key.longitude}' }`)
+   }
+}
+town(['Sofia | 42.696552 | 23.32601','Beijing | 39.913818 | 116.363625'] )

@@ -1,0 +1,11 @@
+function employees(employees){
+    let employeesList = {};
+    for (const key of employees) {
+        const personalNumber = key.length;
+        employeesList[key] = personalNumber;
+    }
+    for (const key in employeesList) {
+      console.log(`Name: ${key} -- Personal Number: ${employeesList[key]}`);
+    }
+}
+employees(['Silas Butler','Adnaan Buckley','Juan Peterson','Brendan Villarreal'] )

@@ -1,0 +1,10 @@
+function solve(input,rotationNumber){
+    'use strict';
+   for (let index = 0; index < rotationNumber; index++) {
+    let firstElemenet = input.shift();
+    input.push(firstElemenet);
+   }
+console.log(input.join(" "));
+}
+
+solve([51, 47, 32, 61, 21], 2)
