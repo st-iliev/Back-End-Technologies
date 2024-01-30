@@ -1,0 +1,25 @@
+function solve(input) {
+    let carInside = [];
+    for (let index = 0; index < input.length; index ++) {
+        const command = input[index].split(',')[0].trim();
+        const carNumber = input[index].split(',')[1].trim();
+        if (command === 'IN' && !carInside.includes(carNumber)) {
+            carInside.push(carNumber);
+        } else if (command === 'OUT' && carInside.includes(carNumber)) {
+            let indexToRemove = carInside.indexOf(carNumber);
+            if (indexToRemove !== -1) {
+                carInside.splice(indexToRemove, 1);
+            }
+        }
+    }
+    if (carInside.length === 0) {
+        console.log("Parking Lot is Empty");
+    } else {
+        carInside.sort();
+        for (const car of carInside) {
+            console.log(car);
+        }
+    }
+}
+
+solve(['IN, CA2844AA','IN, CA1234TA','OUT, CA2844AA','IN, CA9999TT','IN, CA2866HI','OUT, CA1234TA','IN, CA2844AA','OUT, CA2866HI','IN, CA9876HH','IN, CA2822UU'])

@@ -1,0 +1,24 @@
+function solve(text){
+    let splitedText = text.split(' ');
+    let repeatedWords = [];
+    let denedWords = [];
+    for (let index = 0; index < splitedText.length; index++) {
+        const word = splitedText[index].toLowerCase();
+        let wordCounter = 1;
+        if (repeatedWords.includes(word) || denedWords.includes(word)) {
+            continue;
+        }
+        for (let i = index+1; i < splitedText.length; i++) {
+            if(word == splitedText[i].toLowerCase()){
+                wordCounter++;
+            }  
+        }
+        if(wordCounter%2!==0 || wordCounter == 1){     
+                repeatedWords.push(word);
+        }else{
+            denedWords.push(word);
+        }   
+        }
+   console.log(repeatedWords.join(' '));
+}
+solve('Java C# Php PHP Java PhP 3 C# 3 1 5 C#')

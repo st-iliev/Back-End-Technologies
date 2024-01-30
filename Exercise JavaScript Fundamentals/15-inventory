@@ -1,0 +1,31 @@
+function solve(heroData){
+    let heroList = [];
+    for (const hero of heroData) {
+        let heroName = hero.split('/')[0].trim();
+        let heroLevel = parseInt(hero.split('/')[1].trim());
+        let heroItems = hero.split('/')[2].trim();
+        
+        let currentHero = {
+            name : heroName,
+            level : heroLevel,
+            items : heroItems
+        };
+        heroList.push(currentHero);
+    }
+    heroList.sort((a, b) => (a.level-b.level));
+    heroList.forEach(hero => {
+        console.log(`Hero: ${hero.name}`);
+        console.log(`level => ${hero.level}`);
+        console.log(`items => ${hero.items}`);
+    });
+   
+}
+solve([
+
+    'Isacc / 25 / Apple, GravityGun',
+    
+    'Derek / 12 / BarrelVest, DestructionSword',
+    
+    'Hes / 1 / Desolator, Sentinel, Antara'
+    
+    ])
