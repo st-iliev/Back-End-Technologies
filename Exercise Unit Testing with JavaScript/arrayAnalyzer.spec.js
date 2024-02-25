@@ -95,5 +95,4 @@ describe('Test of arrayAnalyzer function', ()=> {
         // Assert
         expect(result).to.deep.equal({ min: 1, max: 6, length: 4 })
     })
-
 })
